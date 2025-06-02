@@ -1,0 +1,196 @@
+[33mcommit 15e057116a50ddc6fd3e2283cc3a0a18c25d13c8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Sat May 31 15:43:46 2025 -0500
+
+    Update Shoot and Gui
+
+[33mcommit e48a25d381c66e1edc8ac0c6ebc48da5dd5b4328[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Thu May 29 19:08:56 2025 -0500
+
+    Micro Update RayCast
+
+[33mcommit 74dece9281cb4d8455f621f37aad2d58de47b4b7[m
+Merge: 2a3f4f0 90cd351
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Tue May 27 21:17:04 2025 -0500
+
+    Merge pull request #8 from andresrios72/develop
+    
+    Verificacion de Laberinto
+
+[33mcommit 90cd351f62a3ae99b2723eed33329b9282567325[m
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Tue May 27 21:15:30 2025 -0500
+
+    Verificacion de Laberinto
+    
+    Se muestra y se organizan ideas
+
+[33mcommit 2a3f4f0ee7e0ff5f61c85073abd31786f55b45a8[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Tue May 27 19:15:05 2025 -0500
+
+    Update UI
+
+[33mcommit 8f1fa9978cbf97ddea5e5ec64989dcf1cd59febe[m
+Merge: f5f4895 2c396b5
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Tue May 27 19:13:47 2025 -0500
+
+    Merge pull request #7 from andresrios72/develop
+    
+    Update Camara
+
+[33mcommit 2c396b5e09ebb5bcc6768372ce4e9d1a77eff2a6[m
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Tue May 27 19:13:11 2025 -0500
+
+    Update Camara
+
+[33mcommit f5f48954e965c1e69a46d36783614d44419e891d[m
+Merge: b9d3cfb 74cb739
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Tue May 27 18:48:44 2025 -0500
+
+    Merge pull request #6 from andresrios72/develop
+    
+    Develop
+
+[33mcommit 74cb739c594d70e493a7e2aa3eb0dfd51a2bf33e[m
+Merge: f8bc552 b9d3cfb
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Tue May 27 18:14:32 2025 -0500
+
+    Merge remote-tracking branch 'upstream/develop' into develop
+
+[33mcommit b9d3cfb47c39a366c3f3df122dce532d3d25b390[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Mon May 26 20:35:45 2025 -0500
+
+    Update camera and target from objects
+
+[33mcommit 87bd2906f93b30a51a55a1c2855dcea2d04aa3e0[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Mon May 26 20:27:16 2025 -0500
+
+    Take Objects and Cross-Bar
+
+[33mcommit f8bc552183ac3159ad8cfbd5d89d23878abddd5d[m
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Mon May 26 20:24:51 2025 -0500
+
+    Update Prefabs
+    
+    Se realiza la actualización e integración de prefabs al laberinto
+
+[33mcommit a2e965ebc0e78cddf3ffc397916ca9b9fbadf469[m
+Merge: 84710c1 8f85e59
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Mon May 26 18:06:32 2025 -0500
+
+    Merge pull request #5 from andresrios72/develop
+    
+    Update Laberinto
+
+[33mcommit 8f85e59eb7a13df9c7d31df4a347f36f17258c1a[m
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Thu May 22 23:30:25 2025 -0500
+
+    Update Laberinto
+    
+    Se crea una maqueta inicial del laberinto
+
+[33mcommit 84710c1a901ae49e72ddd0a44017fcf101f4ebc1[m
+Merge: 16c3ef5 18b7a0f
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Thu May 22 20:23:55 2025 -0500
+
+    Merge pull request #4 from andresrios72/develop
+    
+    Develop
+
+[33mcommit 18b7a0fe3c86c824a70b713afa1618ebdf5c4b43[m
+Merge: 064af94 16c3ef5
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Thu May 22 20:20:47 2025 -0500
+
+    Merge branch 'develop' of https://github.com/andresrios72/mathematical-labyrinth into develop
+
+[33mcommit 16c3ef5dcdd042fda341014cf36ddcd88f16ee71[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Thu May 22 18:51:37 2025 -0500
+
+    Movement Player
+
+[33mcommit 064af94079b2196e023848ff276e75acca25bbdb[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Thu May 22 18:51:37 2025 -0500
+
+    Movement Player
+
+[33mcommit ed7ea49e0c0515e938a7f88afc813011e1f30cd5[m
+Merge: 7fea90d b71f3dc
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Thu May 22 18:28:42 2025 -0500
+
+    Merge pull request #2 from andresrios72/develop
+    
+    Update UI Laberinto
+
+[33mcommit b71f3dce0bb0905c53ebfe20ccfaa3fcbf6d0d46[m
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Thu May 22 18:27:43 2025 -0500
+
+    Update UI Laberinto
+    
+    Se organizan los muros del laberinto
+
+[33mcommit 7fea90d1a791f688a891b450752d7c31f09152c8[m
+Merge: 30aa1a8 3a1d99e
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Thu May 22 18:05:58 2025 -0500
+
+    Merge pull request #1 from andresrios72/develop
+    
+    Develop
+
+[33mcommit 3a1d99e75a02957548e952a15246f95e60b9283d[m
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Thu May 22 01:13:31 2025 -0500
+
+    Init make laberinto
+    
+    Se inicia con la construcción del laberinto
+
+[33mcommit 47f9b09ea9f8b0396ae60b43018baa28697c62c4[m
+Author: andresrios72 <andresrios72@gmail.com>
+Date:   Wed May 21 21:25:20 2025 -0500
+
+    Add Packages
+    
+    Se adicionan los paquetes necesarios para iniciar el proyecto
+
+[33mcommit 30aa1a807314094d4aa461945df34e589a673104[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Wed May 21 19:05:20 2025 -0500
+
+    update terrain
+
+[33mcommit b124245d97ff9a3336c15f91ee1523b9763f9b2c[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Wed May 21 18:28:27 2025 -0500
+
+    Create Folders
+
+[33mcommit 646b202f8ec545157bf90b4a8334ac9c6fa3e3b1[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Wed May 21 17:42:18 2025 -0500
+
+    Create Project
+
+[33mcommit a6c16d28c32aeca522fb1d35e3e6f12450c1a83d[m[33m ([m[1;31mupstream/main[m[33m, [m[1;31mupstream/HEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: JeanPierr-Bs <jeanpierrvalenciaestrada@gmail.com>
+Date:   Wed May 21 17:21:41 2025 -0500
+
+    Initial commit
