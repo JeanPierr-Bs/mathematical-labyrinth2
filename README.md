@@ -1,2 +1,1 @@
-# mathematical-labyrinth2
-
+# mathematical-labyrinth
