@@ -5,6 +5,7 @@ public class CollectioanbleItems : MonoBehaviour
 {
     public GameObject handTarget;
     private GameObject pickedObject = null;
+    public float throwForce = 5f;
     public Texture2D puntero;
 
     private void Update()
@@ -18,13 +19,18 @@ public class CollectioanbleItems : MonoBehaviour
             {
                 // Soltar el objeto
                 pickedObject.transform.SetParent(null, true);
+                
                 pickedObject.transform.rotation = Quaternion.Euler(90, 0, 0);
-
+                
                 var physics = pickedObject.GetComponent<CustomPhysicsObject>();
                 if (physics != null)
                 {
                     physics.simulatePhysics = true;
-                    physics.velocity = Vector2.zero;
+                    ///physics.velocity = Vector2.zero;
+                    Vector3 throwDirection = handTarget.transform.forward + Vector3.up * 0.5f;
+                    //float throwForce = 5f;
+
+                    physics.velocity = throwDirection * throwForce;
                 }
 
                 var shootScript = pickedObject.GetComponentInParent<Shoot>();
