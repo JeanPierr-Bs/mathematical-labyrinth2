@@ -4,28 +4,10 @@ using UnityEngine;
 
 public class PuertasController : MonoBehaviour
 {
-    #region Variables Puerta Uno
-
-    /*Posicion Vector Respuesta Por Defecto*/
-    Vector3 vPositionRtaDF = new Vector3(-58.2340393f, 2.26958394f, 7.95028067f);
-    Quaternion vRotationRtaDF = Quaternion.Euler(0.346169114f, 2.10772896f, 271.108032f);
-
-    /*Posicion Vector Respuesta Correcta*/
-    Vector3 vPositionRtaOK = new Vector3(-59.332962f, 1.47829986f, 7.9856782f);
-    Quaternion vRotationRtaOK = Quaternion.Euler(0.346169055f, 2.10773039f, 297.003937f);
-
-    /*Posicion Vector Respuesta UNO*/
-    Vector3 vPositionRtaUNO = new Vector3(-57.5060005f, 1.33399999f, 7.91800022f);
-    Quaternion vRotationRtaUNO = Quaternion.Euler(0.346169114f, 2.10772896f, 271.108032f);
-
-    /*Posicion Vector Respuesta DOS*/
-    Vector3 vPositionRtaDOS = new Vector3(-58.6920013f, 1.60300004f, 7.96400023f);
-    Quaternion vRotationRtaDOS = Quaternion.Euler(0.346169114f, 2.10772896f, 271.108032f); 
-
-    #endregion
-
     //Para Puerta Uno
     public Transform VectorC = null; // La flecha de respuesta que moverás
+    public Transform VectorD = null; // La flecha de respuesta que moverás
+    public Transform VectorE = null; // La flecha de respuesta que moverás
 
     public Transform Puerta; // La puerta que se abrirá
     public Transform Key; // La puerta que se abrirá
@@ -39,7 +21,12 @@ public class PuertasController : MonoBehaviour
     private Puertas opcionPuerta;
     RotarLlave rotarLlave = new RotarLlave();
 
-    
+    //public Vector2 vectorA = new Vector2(3f, 2f);
+    //public Vector2 vectorB = new Vector2(1f, 2f);
+
+    public Vector3 vectorA = new Vector3(3f, 0f, 2f);
+    public Vector3 vectorB = new Vector3(1f, 0f, 2f);
+
     public void EscogerOpcion(int index, Puertas puerta)
     {
         indexEnviado = index;
@@ -52,20 +39,19 @@ public class PuertasController : MonoBehaviour
                 switch (index)
                 {
                     case 0:
-                        VectorC.position = vPositionRtaOK;
-                        VectorC.rotation = vRotationRtaOK;                
+                        VectorC.gameObject.SetActive(false);
+                        VectorD.gameObject.SetActive(true);
+                        VectorE.gameObject.SetActive(false);
                         break;
                     case 1:
-                        VectorC.position = vPositionRtaUNO;
-                        VectorC.rotation = vRotationRtaUNO;                
+                        VectorC.gameObject.SetActive(false);
+                        VectorD.gameObject.SetActive(false);
+                        VectorE.gameObject.SetActive(true);
                         break;
-                    case 2:
-                        VectorC.position = vPositionRtaDOS;
-                        VectorC.rotation = vRotationRtaDOS;                
-                        break;
-                    default:
-                        VectorC.position = vPositionRtaDF;
-                        VectorC.rotation = vRotationRtaDF;
+                    case 2: //Respuesta OK
+                        VectorC.gameObject.SetActive(true);
+                        VectorD.gameObject.SetActive(false);
+                        VectorE.gameObject.SetActive(false);
                         break;
                 }
                 rotarLlave = Key.GetComponent<RotarLlave>();                
@@ -115,7 +101,15 @@ public class PuertasController : MonoBehaviour
             switch (opcionPuerta)
             {
                 case Puertas.Uno:
-                    Puerta.Translate(Vector3.forward * 4f); // Mueve la puerta a la derecha                    
+                    //Puerta.Translate(Vector3.forward * 4f); // Mueve la puerta a la derecha                    
+
+                    // Sumar los vectores
+                    Vector3 vectorResultado = vectorA + vectorB;
+                    Vector3 vector = new(0, vectorResultado.y, vectorResultado.z);
+
+                    // Aplicar el movimiento a la puerta
+                    Puerta.Translate(vector);
+
                     break;
                 case Puertas.Dos:
                     Puerta.Translate(Vector3.back * 4f); // Mueve la puerta a la derecha
@@ -130,8 +124,8 @@ public class PuertasController : MonoBehaviour
             Puerta.GetComponent<Collider>().enabled = false; // Desactiva colisión
 
             rotarLlave.DetenerRotacion();
-
-            Debug.Log("¡Respuesta correcta! Puerta abierta.");
+            Key.gameObject.SetActive(false);
+            //Debug.Log("¡Respuesta correcta! Puerta abierta.");
         }
     }
 
@@ -155,7 +149,8 @@ public class PuertasController : MonoBehaviour
             }
 
             Puerta.GetComponent<Collider>().enabled = true; // Desactiva colisión
-            Debug.Log("¡Respuesta incorrecta! Puerta cerrada.");
+            Key.gameObject.SetActive(true);
+            //Debug.Log("¡Respuesta incorrecta! Puerta cerrada.");
         }
     }
 }
