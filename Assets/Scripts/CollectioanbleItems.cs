@@ -19,25 +19,32 @@ public class CollectioanbleItems : MonoBehaviour
             {
                 // Soltar el objeto
                 pickedObject.transform.SetParent(null, true);
-                
                 pickedObject.transform.rotation = Quaternion.Euler(90, 0, 0);
-                
+
+                //Si es un objecto
                 var physics = pickedObject.GetComponent<CustomPhysicsObject>();
                 if (physics != null)
                 {
                     physics.simulatePhysics = true;
-                    ///physics.velocity = Vector2.zero;
-                    Vector3 throwDirection = handTarget.transform.forward + Vector3.up * 0.5f;
-                    //float throwForce = 5f;
 
+                    Vector3 throwDirection = handTarget.transform.forward + Vector3.up * 0.5f;
                     physics.velocity = throwDirection * throwForce;
                 }
 
+                //Si es un arma
                 var shootScript = pickedObject.GetComponentInParent<Shoot>();
                 if (shootScript != null)
                 {
                     Debug.Log("Arma soltada");
                     shootScript.isHeld = false;
+                }
+                // Si es un láser
+                var laserScript = pickedObject.GetComponent<LaserController>();
+                if (laserScript != null)
+                {
+                    laserScript.isHeld = false;
+                    laserScript.followTarget = null;
+                    Debug.Log("¡Láser soltado!");
                 }
 
                 pickedObject = null;
@@ -58,7 +65,7 @@ public class CollectioanbleItems : MonoBehaviour
                 {
                     physics.simulatePhysics = false;
                 }
-                
+
                 pickedObject.transform.SetParent(handTarget.transform, false);
                 pickedObject.transform.localRotation = Quaternion.Euler(0, 90, 0);
                 pickedObject.transform.position = handTarget.transform.position;
@@ -67,12 +74,16 @@ public class CollectioanbleItems : MonoBehaviour
                 var shootScript = pickedObject.GetComponentInParent<Shoot>();
                 if (shootScript != null)
                 {
-                    Debug.Log("¡Arma recogida correctamente!");
                     shootScript.isHeld = true;
+                    Debug.Log("¡Arma recogida!");
                 }
-                else
+                // Verificar si es un láser
+                var laserScript = pickedObject.GetComponent<LaserController>();
+                if (laserScript != null)
                 {
-                    Debug.LogWarning("No se encontró el script 'Shoot' en el objeto recogido");
+                    laserScript.isHeld = true;
+                    laserScript.followTarget = handTarget.transform; // <- importante
+                    Debug.Log("¡Láser en mano!");
                 }
             }
         }

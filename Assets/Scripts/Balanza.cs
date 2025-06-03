@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Balanza : MonoBehaviour
 {
     public float fuerzaTotalActual = 0f;
     public float umbralFuerza = 10f;// 3924f;
     public Puertas puerta; // Referencia a la puerta que se va a abrir
+    public Text textSuma;
+    public Text textFA;
 
     private List<Caja> cajasEnBalanza = new List<Caja>();
     private float gravedad = 9.81f;
@@ -38,9 +41,11 @@ public class Balanza : MonoBehaviour
             masaTotal += caja.masa;
         }
 
+        /*F = m * g*/
         fuerzaTotalActual = masaTotal * gravedad;
-        //Debug.Log("Esta es la suma de las cajas " + masaTotal);
-        //Debug.Log("Esta es la suma de las cajas " + fuerzaTotalActual);
+
+        textSuma.text = masaTotal.ToString();
+        textFA.text = fuerzaTotalActual.ToString();
 
         if (fuerzaTotalActual >= umbralFuerza)
         {
